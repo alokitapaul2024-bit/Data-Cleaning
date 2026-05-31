@@ -9,12 +9,12 @@ df.columns = df.columns.str.replace(' ', '_') #replacing the spaces with undersc
 print("\n BEFORE (empty values):")
 print(df.isnull().sum()) #when a coloumn is null it is denoted as True i.e 1(binary 1 & 0) and the amount of times T appears it gets added and hence giving us the number of missing values
 #filling all the null space  with the most common value found in the coloumn(mode)-for the numeric items and filling the rest strings with 'Unknown'
-df.clicks=df.clicks.fillna(df.clicks.mode())
-df.impressions=df.impressions.fillna(df.impressions.mode())
+df.clicks=df.clicks.fillna(df.clicks.mean())
+df.impressions=df.impressions.fillna(df.impressions.mean())
 df.cost=df.cost.fillna('Unknown')
-df.leads=df.leads.fillna(df.leads.mode())
-df.conversions=df.conversions.fillna(df.conversions.mode())
-df.conversion_rate=df.conversion_rate.fillna(df.conversion_rate.mode())
+df.leads=df.leads.fillna(df.leads.mean())
+df.conversions=df.conversions.fillna(df.conversions.mean())
+df.conversion_rate=df.conversion_rate.fillna(df.conversion_rate.mean())
 df.sale_amount=df.sale_amount.fillna('Unknown')
 print("\n")
 print("AFTER:")
