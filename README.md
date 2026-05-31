@@ -9,7 +9,7 @@ Python, Pandas
 
 ## What I Did
 1. Renamed column headers to lowercase with underscores
-2. Handled missing values by filling with mean or 'unknown'
+2. Handled missing values by filling with mean(for numeric columns) or 'unknown'(for string columns)
 3. Checked for duplicates (not found)
 4. Standardized device column casing (Desktop/Mobile/Tablet)
 5. Fixed location typos (hyderbad, hydrebad → Hyderabad)
